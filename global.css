@@ -1,0 +1,31 @@
+@font-face {
+	font-display: swap;
+	font-family: Inter Variable;
+	src: url("/fonts/inter_variable.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+
+	width: 100vw;
+	font-family: Inter Variable;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
