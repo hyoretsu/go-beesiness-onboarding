@@ -1,0 +1,32 @@
+main {
+	display: flex;
+	flex-direction: column;
+
+	margin: 0 25vw;
+}
+
+main a,
+main p,
+main ol {
+	margin-top: 0.5rem;
+}
+
+main > div {
+	margin-top: 1rem;
+}
+
+main ol {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+main li span {
+	font-variation-settings: "slnt" -6;
+}
+
+@media (max-width: 425px) {
+	main {
+		margin: 0;
+	}
+}
