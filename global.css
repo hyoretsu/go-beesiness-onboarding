@@ -33,5 +33,6 @@ a {
 main {
 	flex: 1;
 
-	padding: 0 10%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
