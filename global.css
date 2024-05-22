@@ -22,10 +22,16 @@ body {
 	flex-direction: column;
 
 	width: 100vw;
+	min-height: 100vh;
 	font-family: Inter Variable;
 }
 
 a {
 	text-decoration: none;
-	color: inherit;
+}
+
+main {
+	flex: 1;
+
+	padding: 0 10% 5rem;
 }

@@ -29,9 +29,6 @@
 	background-color: #eeeeee;
 }
 
-@media (max-width: 425px) {
-}
-
 footer {
 	display: flex;
 	flex-direction: column;
