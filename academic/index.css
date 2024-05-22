@@ -1,0 +1,25 @@
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+
+	padding: 0 25vw;
+}
+
+main > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	text-align: center;
+
+	padding: 1rem;
+	border: 2px solid #000;
+	border-radius: 1rem;
+}
+
+main > div img {
+	width: 5rem;
+	height: 5rem;
+}
