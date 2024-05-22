@@ -1,0 +1,31 @@
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	padding: 0 25vw;
+}
+
+main > div {
+	display: flex;
+	flex-direction: column;
+
+	padding: 1rem;
+	border: 2px solid #000;
+	border-radius: 1rem;
+}
+
+main > div div {
+	display: flex;
+
+	margin-top: 1rem;
+}
+
+main > div img {
+	width: 5rem;
+	height: 5rem;
+}
+
+main > div p {
+	margin-left: 1rem;
+}
