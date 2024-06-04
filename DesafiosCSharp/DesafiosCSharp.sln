@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q1", "q1\q1.csproj", "{BEFD0E09-C09B-4855-B8E5-C17D0CC72092}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piramide", "q1\Piramide.csproj", "{BEFD0E09-C09B-4855-B8E5-C17D0CC72092}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q2", "q2\q2.csproj", "{2186FEF0-B11C-4E6C-A6B9-93A788778A55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vertice", "q2\Vertice.csproj", "{2186FEF0-B11C-4E6C-A6B9-93A788778A55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q3", "q3\q3.csproj", "{9A103D1B-71EB-416E-9951-25080BA91590}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangulo", "q3\Triangulo.csproj", "{9A103D1B-71EB-416E-9951-25080BA91590}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q4", "q4\q4.csproj", "{12349669-187A-4678-8F14-0402EE2EDFB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poligono", "q4\Poligono.csproj", "{12349669-187A-4678-8F14-0402EE2EDFB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q5", "q5\q5.csproj", "{6A8F8C21-8ED8-4715-82DF-78BCFEFF69D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intervalo", "q5\Intervalo.csproj", "{6A8F8C21-8ED8-4715-82DF-78BCFEFF69D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

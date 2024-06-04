@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\q2\q2.csproj" />
+    <ProjectReference Include="../q2/Vertice.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
