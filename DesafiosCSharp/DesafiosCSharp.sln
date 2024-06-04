@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armstrong", "q7\Armstrong.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidacaoDados", "q8\ValidacaoDados.csproj", "{B3FDDDF7-AB0C-40BD-93CE-C88B5269E33B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carro", "q9\Carro.csproj", "{18040B90-07EC-4E4A-B930-06DBD06850D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensaoLista", "q10\ExtensaoLista.csproj", "{0238C6FF-1B3A-4B47-AEB6-E18C9032CB30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
