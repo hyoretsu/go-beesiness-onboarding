@@ -17,6 +17,10 @@ public class Intervalo {
 		return startTime.Equals(intervalo.startTime) && endTime.Equals(intervalo.endTime);
 	}
 
+	public static int Compare(Intervalo a, Intervalo b) {
+		return a.startTime.CompareTo(b.startTime);
+	}
+
 	public bool TemIntersecao(Intervalo intervalo) {
 		// Engenhosidade GPT
 		return startTime.CompareTo(intervalo.endTime) <= 0 && intervalo.startTime.CompareTo(endTime) <= 0;
