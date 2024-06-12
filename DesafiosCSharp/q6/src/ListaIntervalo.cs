@@ -1,22 +1,22 @@
 public class ListaIntervalo {
-	private List<Intervalo> intervalos;
-	public Intervalo[] Intervalos {
-		get => [.. intervalos];
+	public List<Intervalo> Intervalos {
+		get;
+		private set;
 	}
 
 	public ListaIntervalo(Intervalo[] intervalos) {
-		this.intervalos = [.. intervalos];
-		this.intervalos.Sort();
+		Intervalos = [.. intervalos];
+		Intervalos.Sort();
 	}
 
 	public void Add(Intervalo i) {
-		foreach (Intervalo intervalo in intervalos) {
+		foreach (Intervalo intervalo in Intervalos) {
 			if (intervalo.TemIntersecao(i)) {
 				throw new Exception("Inserção inválida.");
 			}
 		}
 
-		intervalos = [.. intervalos.Append(i)];
-		intervalos.Sort();
+		Intervalos = [.. Intervalos.Append(i)];
+		Intervalos.Sort();
 	}
 }

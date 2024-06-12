@@ -23,7 +23,6 @@ public class Triangulo {
 		get => v3;
 	}
 
-
 	public Triangulo(Vertice v1, Vertice v2, Vertice v3) {
 		lados = [v1.Distancia(v2), v1.Distancia(v3), v2.Distancia(v3)];
 
