@@ -1,0 +1,3 @@
+﻿using Interface;
+
+MainMenu.Run();
