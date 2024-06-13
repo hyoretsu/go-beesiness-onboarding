@@ -1,7 +1,8 @@
 using Domain.Modules.Patients.DTOs;
 using Domain.Modules.Patients.Models;
+using Domain.Modules.Patients.Repository;
 
-namespace Domain.Modules.Patients.Repository;
+namespace Infra.Modules.Patients.Repository;
 
 public class MemoryPatientsRepository : IPatientsRepository {
 	private IEnumerable<Patient> patients;

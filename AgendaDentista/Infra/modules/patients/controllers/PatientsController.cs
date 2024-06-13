@@ -2,8 +2,9 @@
 using Domain.Modules.Patients.Models;
 using Domain.Modules.Patients.Repository;
 using Domain.Modules.Patients.Services;
+using Infra.Modules.Patients.Repository;
 
-namespace Infra.Modules.Patients;
+namespace Infra.Modules.Patients.Controllers;
 
 public static class PatientsController {
 	public static readonly IPatientsRepository patientsRepository = new MemoryPatientsRepository();

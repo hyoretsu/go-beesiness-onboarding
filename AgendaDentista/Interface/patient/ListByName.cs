@@ -1,5 +1,5 @@
 using Domain.Modules.Patients.Models;
-using Infra.Modules.Patients;
+using Infra.Modules.Patients.Controllers;
 
 public class PatientListByName {
 	public static void Run() {

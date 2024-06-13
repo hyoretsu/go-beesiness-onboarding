@@ -1,7 +1,7 @@
 using System.Globalization;
 using Domain.Modules.Patients.DTOs;
 using Domain.Shared.Exceptions;
-using Infra.Modules.Patients;
+using Infra.Modules.Patients.Controllers;
 
 namespace Interface.Patient;
 
