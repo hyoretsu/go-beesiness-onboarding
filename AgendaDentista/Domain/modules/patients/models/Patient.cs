@@ -4,7 +4,6 @@ using Domain.Modules.Patients.DTOs;
 namespace Domain.Modules.Patients.Models;
 
 public class Patient {
-	public readonly Guid id;
 	public readonly DateTime birthDate;
 	public readonly string cpf;
 	public readonly string nome;
@@ -12,7 +11,6 @@ public class Patient {
 	public readonly DateTime updatedAt;
 
 	public Patient(CreatePatientDTO data) {
-		id = new Guid();
 		birthDate = data.birthDate;
 		cpf = data.cpf;
 		nome = data.nome;

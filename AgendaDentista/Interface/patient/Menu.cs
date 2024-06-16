@@ -19,6 +19,7 @@ public static class PatientMenu {
 					PatientRegister.Run();
 					break;
 				case 2:
+					PatientDelete.Run();
 					break;
 				case 3:
 					break;

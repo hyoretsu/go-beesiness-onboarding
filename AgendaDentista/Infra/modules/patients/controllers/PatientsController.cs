@@ -10,12 +10,17 @@ public static class PatientsController {
 	public static readonly IPatientsRepository patientsRepository = new MemoryPatientsRepository();
 
 	public static readonly CreatePatientService createPatient = new(patientsRepository);
+	public static readonly DeletePatientService deletePatient = new(patientsRepository);
 	public static readonly ListPatientsByNameService listPatientsByName = new(patientsRepository);
 
 	public static Patient Create(CreatePatientDTO data) {
 		Patient patient = createPatient.Execute(data);
 
 		return patient;
+	}
+
+	public static void Delete(DeletePatientDTO data) {
+		deletePatient.Execute(data);
 	}
 
 	public static IEnumerable<Patient> ListByName() {
