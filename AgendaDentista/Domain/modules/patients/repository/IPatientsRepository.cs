@@ -6,6 +6,6 @@ namespace Domain.Modules.Patients.Repository;
 public interface IPatientsRepository {
 	public Patient Create(CreatePatientDTO data);
 	public void Delete(string cpf);
-	public Patient[] FindAll();
+	public IEnumerable<Patient> FindAll();
 	public Patient? FindByCpf(string cpf);
 }

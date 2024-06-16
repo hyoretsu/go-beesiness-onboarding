@@ -1,4 +1,5 @@
 using System.Collections;
+using Domain.Modules.Appointments.Models;
 using Domain.Modules.Patients.DTOs;
 
 namespace Domain.Modules.Patients.Models;
@@ -7,6 +8,7 @@ public class Patient {
 	public readonly DateTime birthDate;
 	public readonly string cpf;
 	public readonly string nome;
+	public IEnumerable<Appointment> Agendamentos = [];
 	public readonly DateTime createdAt;
 	public readonly DateTime updatedAt;
 
