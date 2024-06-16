@@ -22,6 +22,7 @@ public static class PatientMenu {
 					PatientDelete.Run();
 					break;
 				case 3:
+					PatientListByCpf.Run();
 					break;
 				case 4:
 					PatientListByName.Run();

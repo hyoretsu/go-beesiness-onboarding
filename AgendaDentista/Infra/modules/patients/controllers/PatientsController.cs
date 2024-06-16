@@ -11,6 +11,7 @@ public static class PatientsController {
 
 	public static readonly CreatePatientService createPatient = new(patientsRepository);
 	public static readonly DeletePatientService deletePatient = new(patientsRepository);
+	public static readonly ListPatientsByCpfService listPatientsByCpf = new(patientsRepository);
 	public static readonly ListPatientsByNameService listPatientsByName = new(patientsRepository);
 
 	public static Patient Create(CreatePatientDTO data) {
@@ -21,6 +22,12 @@ public static class PatientsController {
 
 	public static void Delete(DeletePatientDTO data) {
 		deletePatient.Execute(data);
+	}
+
+	public static IEnumerable<Patient> ListByCpf() {
+		IEnumerable<Patient> patients = listPatientsByCpf.Execute();
+
+		return patients;
 	}
 
 	public static IEnumerable<Patient> ListByName() {

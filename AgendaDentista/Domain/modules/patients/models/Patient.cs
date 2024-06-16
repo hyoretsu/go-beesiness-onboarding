@@ -18,6 +18,12 @@ public class Patient {
 		updatedAt = createdAt;
 	}
 
+	public class CpfComparer : IComparer {
+		int IComparer.Compare(object? x, object? y) {
+			return Int32.Parse((x as Patient)?.cpf!).CompareTo(Int32.Parse((y as Patient)?.cpf!))!;
+		}
+	}
+
 	public class NameComparer : IComparer {
 		int IComparer.Compare(object? x, object? y) {
 			return (int)(x as Patient)?.nome.CompareTo((y as Patient)?.nome)!;
