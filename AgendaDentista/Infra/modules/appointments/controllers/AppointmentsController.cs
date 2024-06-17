@@ -7,12 +7,17 @@ namespace Infra.Modules.Appointments.Controllers;
 
 public static class AppointmentsController {
 	private static readonly CreateAppointmentService createAppointment = new(SingletonClasses.appointmentsRepository, SingletonClasses.patientsRepository);
+	private static readonly DeleteAppointmentService deleteAppointment = new(SingletonClasses.appointmentsRepository, SingletonClasses.patientsRepository);
 	private static readonly ListAppointmentsService listAppointments = new(SingletonClasses.appointmentsRepository);
 
 	public static Appointment Create(CreateAppointmentDTO data) {
 		Appointment appointment = createAppointment.Execute(data);
 
 		return appointment;
+	}
+
+	public static void Delete(DeleteAppointmentDTO data) {
+		deleteAppointment.Execute(data);
 	}
 
 	public static IEnumerable<Appointment> List() {

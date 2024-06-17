@@ -20,6 +20,10 @@ public class MemoryAppointmentsRepository : IAppointmentsRepository {
 		return appointment;
 	}
 
+	public void Delete(DeleteAppointmentDTO data) {
+		Appointments = Appointments.Where(appointment => !(appointment.patientCpf == data.cpf && appointment.startTime == data.startTime));
+	}
+
 	public void DeleteByCpf(string cpf) {
 		Appointments = Appointments.Where(appointment => appointment.patientCpf != cpf);
 	}

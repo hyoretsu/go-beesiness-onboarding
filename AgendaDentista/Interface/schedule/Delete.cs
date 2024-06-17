@@ -4,11 +4,11 @@ using Infra.Modules.Appointments.Controllers;
 
 namespace Interface.Schedule;
 
-public static class AppointmentCreate {
+public static class AppointmentDelete {
 	public static void Run() {
-		string cpf, dateStr, endTimeStr, startTimeStr;
-
 		try {
+			string cpf, dateStr, startTimeStr;
+
 			Console.Write("CPF: ");
 			cpf = Console.ReadLine()!;
 
@@ -41,31 +41,16 @@ public static class AppointmentCreate {
 
 			DateTime startTime = date.AddHours(startHour).AddMinutes(startMinute);
 
-			Console.Write("Hora final: ");
-			endTimeStr = Console.ReadLine()!;
-
-			int endHour = int.Parse(endTimeStr[..2]);
-			if (endHour < 8 || endHour >= 19) {
-				throw new Exception("A hora inicial deve estar entre 08:00 e 19:00.");
-			}
-			int endMinute = int.Parse(endTimeStr[2..]);
-			if (endMinute < 15 || endMinute >= 60 || endMinute % 15 != 0) {
-				throw new Exception("Minutos iniciais inválidos.");
-			}
-
-			DateTime endTime = date.AddHours(endHour).AddMinutes(endMinute);
-
-			AppointmentsController.Create(new CreateAppointmentDTO {
+			AppointmentsController.Delete(new DeleteAppointmentDTO {
 				cpf = cpf,
-				endTime = endTime,
 				startTime = startTime,
 			});
 
-			Console.WriteLine("Agendamento realizado com sucesso!");
+			Console.WriteLine("Agendamento cancelado com sucesso!");
 			Console.WriteLine("");
 		} catch (Exception e) {
-			// Todo: ask again for wrong inputs
 			Console.WriteLine(e.Message);
+			Run();
 		}
 	}
 }

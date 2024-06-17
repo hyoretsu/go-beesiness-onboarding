@@ -18,6 +18,7 @@ public static class ScheduleMenu {
 					AppointmentCreate.Run();
 					break;
 				case 2:
+					AppointmentDelete.Run();
 					break;
 				case 3:
 					AppointmentList.Run();

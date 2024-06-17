@@ -5,6 +5,7 @@ namespace Domain.Modules.Appointments.Repository;
 
 public interface IAppointmentsRepository {
 	public Appointment Create(CreateAppointmentDTO data);
+	public void Delete(DeleteAppointmentDTO data);
 	public void DeleteByCpf(string cpf);
 	public IEnumerable<Appointment> FindAll();
 	public IEnumerable<Appointment> FindByCpf(string cpf);
