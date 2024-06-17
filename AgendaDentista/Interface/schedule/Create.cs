@@ -62,6 +62,7 @@ public static class AppointmentCreate {
 			});
 
 			Console.WriteLine("Agendamento realizado com sucesso!");
+			Console.WriteLine("");
 		} catch (Exception e) {
 			// Todo: ask again for wrong inputs
 			Console.WriteLine(e.Message);

@@ -1,6 +1,7 @@
 using Domain.Modules.Appointments.DTOs;
 using Domain.Modules.Appointments.Models;
 using Domain.Modules.Appointments.Repository;
+using Infra.Shared;
 
 namespace Infra.Modules.Appointments.Repository;
 
@@ -23,10 +24,28 @@ public class MemoryAppointmentsRepository : IAppointmentsRepository {
 		Appointments = Appointments.Where(appointment => appointment.patientCpf != cpf);
 	}
 
-	public IEnumerable<Appointment> FindByCpf(string cpf) {
-		IEnumerable<Appointment> foundAppointments = Appointments.Where(appointment => appointment.patientCpf == cpf);
+	public IEnumerable<Appointment> FindAll() {
+		IEnumerable<Appointment> appointments = Appointments;
+		foreach (Appointment appointment in appointments) {
+			appointment.Paciente = SingletonClasses.patientsRepository.Patients.Where(patient => patient.cpf == appointment.patientCpf).First();
+		}
 
-		return foundAppointments;
+		return appointments;
+	}
+
+	public IEnumerable<Appointment> FindByCpf(string cpf) {
+		IEnumerable<Appointment> appointments = Appointments.Where(appointment => appointment.patientCpf == cpf);
+
+		return appointments;
+	}
+
+	public IEnumerable<Appointment> FindByPeriod(DateTime startDate, DateTime endDate) {
+		IEnumerable<Appointment> appointments = Appointments.Where(appointment => appointment.startTime >= startDate && appointment.endTime <= endDate);
+		foreach (Appointment appointment in appointments) {
+			appointment.Paciente = SingletonClasses.patientsRepository.Patients.Where(patient => patient.cpf == appointment.patientCpf).First();
+		}
+
+		return appointments;
 	}
 
 	public Appointment? FindExisting(FindExistingAppointmentDTO data) {

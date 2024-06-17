@@ -20,6 +20,7 @@ public static class ScheduleMenu {
 				case 2:
 					break;
 				case 3:
+					AppointmentList.Run();
 					break;
 				case 4:
 					break;
