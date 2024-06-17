@@ -53,8 +53,8 @@ public static class AppointmentList {
 			Console.WriteLine("-------------------------------------------------------------");
 			Console.WriteLine("");
 		} catch (Exception e) {
-			// Todo: ask again for wrong inputs
 			Console.WriteLine(e.Message);
+			Run();
 		}
 	}
 }

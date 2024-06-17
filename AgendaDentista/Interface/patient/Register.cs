@@ -36,6 +36,7 @@ public static class PatientRegister {
 		} catch (ApiException e) {
 			// Todo: ask again for wrong inputs
 			Console.WriteLine(e.Message);
+			Run();
 		}
 	}
 }
