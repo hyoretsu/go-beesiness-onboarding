@@ -6,11 +6,7 @@ using Infra.Shared;
 namespace Infra.Modules.Patients.Repository;
 
 public class MemoryPatientsRepository : IPatientsRepository {
-	public IEnumerable<Patient> Patients { get; private set; }
-
-	public MemoryPatientsRepository() {
-		Patients = [];
-	}
+	private IEnumerable<Patient> Patients = Database.patient;
 
 	public Patient Create(CreatePatientDTO data) {
 		Patient patient = new(data);
@@ -28,7 +24,7 @@ public class MemoryPatientsRepository : IPatientsRepository {
 		IEnumerable<Patient> patients = Patients;
 
 		foreach (Patient patient in patients) {
-			patient.Agendamentos = SingletonClasses.appointmentsRepository.Appointments.Where(appointment => appointment.patientCpf == patient.cpf);
+			patient.Agendamentos = Database.appointment.Where(appointment => appointment.patientCpf == patient.cpf);
 		};
 
 		return patients;

@@ -6,7 +6,7 @@ using Infra.Shared;
 namespace Infra.Modules.Appointments.Repository;
 
 public class MemoryAppointmentsRepository : IAppointmentsRepository {
-	public IEnumerable<Appointment> Appointments { get; private set; }
+	private IEnumerable<Appointment> Appointments = Database.appointment;
 
 	public MemoryAppointmentsRepository() {
 		Appointments = [];
@@ -27,7 +27,7 @@ public class MemoryAppointmentsRepository : IAppointmentsRepository {
 	public IEnumerable<Appointment> FindAll() {
 		IEnumerable<Appointment> appointments = Appointments;
 		foreach (Appointment appointment in appointments) {
-			appointment.Paciente = SingletonClasses.patientsRepository.Patients.Where(patient => patient.cpf == appointment.patientCpf).First();
+			appointment.Paciente = Database.patient.Where(patient => patient.cpf == appointment.patientCpf).First();
 		}
 
 		return appointments;
@@ -42,7 +42,7 @@ public class MemoryAppointmentsRepository : IAppointmentsRepository {
 	public IEnumerable<Appointment> FindByPeriod(DateTime startDate, DateTime endDate) {
 		IEnumerable<Appointment> appointments = Appointments.Where(appointment => appointment.startTime >= startDate && appointment.endTime <= endDate);
 		foreach (Appointment appointment in appointments) {
-			appointment.Paciente = SingletonClasses.patientsRepository.Patients.Where(patient => patient.cpf == appointment.patientCpf).First();
+			appointment.Paciente = Database.patient.Where(patient => patient.cpf == appointment.patientCpf).First();
 		}
 
 		return appointments;

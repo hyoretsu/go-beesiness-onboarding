@@ -1,8 +1,6 @@
 ﻿using Domain.Modules.Patients.DTOs;
 using Domain.Modules.Patients.Models;
-using Domain.Modules.Patients.Repository;
 using Domain.Modules.Patients.Services;
-using Infra.Modules.Patients.Repository;
 using Infra.Shared;
 
 namespace Infra.Modules.Patients.Controllers;
